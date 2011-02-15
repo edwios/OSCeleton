@@ -109,6 +109,16 @@ composer with the "-q" option. The messages will have the following format:
 Example (left knee of user 3):
     /joint/l_knee/3 0.08823146 0.5761504 0.44253197
 
+#### NOTE: Scratch mode
+To send scratch_broadcast messages compatible with the Scratch software developed by the Lifelong Kindergarten Group at the MIT Media Lab, use the "-c" option. The messages is not OSC and have the
+following format:
+    broadcast message_name
+    sensor-update joint_x X coord of joint joint_y Y coord of joint ...
+    s: joint
+    f: X coordinate of joint in interval [-320.0, 320.0]
+    f: Y coordinate of joint in interval [-240.0, 240.0]
+Example (left knee of user 3):
+    sensor-update "l_knee_x" -32.837425 "l_knee_y" -42.730053 
 
 ### Full list of joints
 
